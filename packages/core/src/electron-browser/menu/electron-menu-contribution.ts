@@ -69,11 +69,6 @@ export namespace ElectronMenus {
     export const VIEW_WINDOW = [...CommonMenus.VIEW, 'window'];
     export const VIEW_ZOOM = [...CommonMenus.VIEW_APPEARANCE_SUBMENU, '4_appearance_submenu_zoom'];
 }
-
-export namespace ElectronMenus {
-    export const HELP_TOGGLE = [...CommonMenus.HELP, 'z_toggle'];
-}
-
 export namespace ElectronMenus {
     export const FILE_CLOSE = [...CommonMenus.FILE_CLOSE, 'window-close'];
 }
@@ -374,9 +369,6 @@ export class ElectronMenuContribution extends BrowserMenuBarContribution impleme
     }
 
     registerMenus(registry: MenuModelRegistry): void {
-        registry.registerMenuAction(ElectronMenus.HELP_TOGGLE, {
-            commandId: ElectronCommands.TOGGLE_DEVELOPER_TOOLS.id
-        });
 
         registry.registerMenuAction(ElectronMenus.VIEW_WINDOW, {
             commandId: ElectronCommands.RELOAD.id,

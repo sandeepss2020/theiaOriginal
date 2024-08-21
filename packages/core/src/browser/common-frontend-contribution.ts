@@ -108,8 +108,6 @@ export namespace CommonMenus {
     export const MANAGE_SETTINGS_THEMES = [...MANAGE_SETTINGS, '1_manage_settings_themes'];
 
     // last menu item
-    export const HELP = [...MAIN_MENU_BAR, '9_help'];
-
 }
 
 export namespace CommonCommands {
@@ -603,7 +601,6 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
         registry.registerSubmenu(CommonMenus.FILE, nls.localizeByDefault('File'));
         registry.registerSubmenu(CommonMenus.EDIT, nls.localizeByDefault('Edit'));
         registry.registerSubmenu(CommonMenus.VIEW, nls.localizeByDefault('View'));
-        registry.registerSubmenu(CommonMenus.HELP, nls.localizeByDefault('Help'));
 
         // For plugins contributing create new file commands/menu-actions
         registry.registerIndependentSubmenu(CommonMenus.FILE_NEW_CONTRIBUTIONS, nls.localizeByDefault('New File...'));
@@ -729,11 +726,6 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
             commandId: CommonCommands.UNPIN_TAB.id,
             label: nls.localizeByDefault('Unpin'),
             order: '8'
-        });
-        registry.registerMenuAction(CommonMenus.HELP, {
-            commandId: CommonCommands.ABOUT_COMMAND.id,
-            label: CommonCommands.ABOUT_COMMAND.label,
-            order: '9'
         });
 
         registry.registerMenuAction(CommonMenus.VIEW_PRIMARY, {
